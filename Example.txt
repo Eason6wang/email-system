@@ -1,0 +1,177 @@
+  ***************************intput ********************************
+  1 b g1 g
+  2 b g2 h
+  3 b g3 i
+  4 b g4 k
+  5 b g5 m
+  6 aa g1 e1
+  7 aa g1 e2
+  8 aa g1 e3
+  9 aa g1 e4
+ 10 aa g2 0a
+ 11 aa g2 a0
+ 12 aa g2 a1
+ 13 aa g2 b1
+ 14 aa g2 def
+ 15 aa g3 e0
+ 16 aa g3 f9
+ 17 aa g3 j
+ 18 aa g4 hhh
+ 19 aa g4 uxw
+ 20 aa g4 w
+ 21 aa g5 fish
+ 22 aa g5 fred
+ 23 aa g5 sue
+ 24 ag g2 g3
+ 25 ag g4 g5
+ 26 ag g1 g2
+ 27 ag g1 g4
+ 28 sa g1 hhh
+ 29 sa g1 fish
+ 30 ra g1 fish
+ 31 ra g1 fred
+~
+*********************output***********************************
+
+Command: Group g1 with name "g" has been created.
+Command: Group g2 with name "h" has been created.
+Command: Group g3 with name "i" has been created.
+Command: Group g4 with name "k" has been created.
+Command: Group g5 with name "m" has been created.
+Command: Added email address "e1" to group g1 =
+g
+[e1]
+
+Command: Added email address "e2" to group g1 =
+g
+[e1, e2]
+
+Command: Added email address "e3" to group g1 =
+g
+[e1, e2, e3]
+
+Command: Added email address "e4" to group g1 =
+g
+[e1, e2, e3, e4]
+
+Command: Added email address "0a" to group g2 =
+h
+[0a]
+
+Command: Added email address "a0" to group g2 =
+h
+[0a, a0]
+
+Command: Added email address "a1" to group g2 =
+h
+[0a, a0, a1]
+
+Command: Added email address "b1" to group g2 =
+h
+[0a, a0, a1, b1]
+
+Command: Added email address "def" to group g2 =
+h
+[0a, a0, a1, b1, def]
+
+Command: Added email address "e0" to group g3 =
+i
+[e0]
+
+Command: Added email address "f9" to group g3 =
+i
+[e0, f9]
+
+Command: Added email address "j" to group g3 =
+i
+[e0, f9, j]
+
+Command: Added email address "hhh" to group g4 =
+k
+[hhh]
+
+Command: Added email address "uxw" to group g4 =
+k
+[hhh, uxw]
+
+Command: Added email address "w" to group g4 =
+k
+[hhh, uxw, w]
+
+Command: Added email address "fish" to group g5 =
+m
+[fish]
+
+Command: Added email address "fred" to group g5 =
+m
+[fish, fred]
+
+Command: Added email address "sue" to group g5 =
+m
+[fish, fred, sue]
+
+Command: Move g3 to g2
+g2 =
+h
+[0a, a0, a1, b1, def]
+        i
+        [e0, f9, j]
+
+Command: Move g5 to g4
+g4 =
+k
+[hhh, uxw, w]
+        m
+        [fish, fred, sue]
+
+Command: Move g2 to g1
+g1 =
+g
+[e1, e2, e3, e4]
+        h
+        [0a, a0, a1, b1, def]
+                i
+                [e0, f9, j]
+
+Command: Move g4 to g1
+g1 =
+g
+[e1, e2, e3, e4]
+        h
+        [0a, a0, a1, b1, def]
+                i
+                [e0, f9, j]
+        k
+        [hhh, uxw, w]
+                m
+                [fish, fred, sue]
+
+Command: Find email address "hhh" in group g1 successfully; node =
+hhh
+Command: Find email address "fish" in group g1 successfully; node =
+fish
+Command: Removed email address "fish" from group g1 successfully; g1 =
+g
+[e1, e2, e3, e4]
+        h
+        [0a, a0, a1, b1, def]
+                i
+                [e0, f9, j]
+        k
+        [hhh, uxw, w]
+                m
+                [fred, sue]
+
+Command: Removed email address "fred" from group g1 successfully; g1 =
+g
+[e1, e2, e3, e4]
+        h
+        [0a, a0, a1, b1, def]
+                i
+                [e0, f9, j]
+        k
+        [hhh, uxw, w]
+                m
+                [sue]
+
+
